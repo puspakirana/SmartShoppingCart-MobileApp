@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopUpBalance"
+    android:orientation="vertical"
+    android:background="@color/shade3"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:id="@+id/img_regist"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/regist"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/reg_test"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Top Up Balance"
+            android:fontFamily="@font/bakso_sapi"
+            android:textSize="36sp"
+            android:layout_centerVertical="true"
+            android:textColor="#515547"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/topup_id"
+                android:hint="Customer ID"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/shade1"
+                android:textColorHint="#515547">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#515547">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/topup_scan"
+                android:background="@null"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/scan"/>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/topup_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Balance"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="20dp"
+            app:boxStrokeColor="@color/shade1"
+            android:textColorHint="#515547">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="#515547">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/topup_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/shade2"
+        android:fontFamily="@font/bakso_sapi"
+        android:onClick="updateBalance"
+        android:text="Top Up" />
+
+
+
+</LinearLayout>
